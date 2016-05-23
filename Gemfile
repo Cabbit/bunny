@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'rails_12factor', group: :production
 gem 'simplecov', require: false, group: :test
 gem 'twitter-bootstrap-rails'
+gem 'sprockets-es6'
 
 
 # Use Capistrano for deployment
