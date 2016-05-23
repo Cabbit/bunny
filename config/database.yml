@@ -16,4 +16,5 @@ test:
   <<: *default
   database: bunny-ink-test
 production:
-   url: <%= ENV['CLEARDB_DATABASE_URL'] %>
+	adapter: mysql2
+  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
