@@ -9,11 +9,18 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-
-require('jquery');
+//= require jquery
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
 
-var images = require('./images_collection.es6');
-window.images = new images
+var React      = require('react');
+var ReactDOM   = require('react-dom');
+var ImageBox = require('./image_box.jsx');
+
+$(document).ready(function() {
+  ReactDOM.render(
+    <ImageBox url="/images" pollInterval={4000} />,
+    document.getElementById('content')
+  );
+});

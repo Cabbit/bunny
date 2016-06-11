@@ -7,16 +7,24 @@ Backbone.$ = $
 const { View, RelationalModel, Collection, Router, LocalStorage, modelFactory } = Backbone
 
 class Image extends RelationalModel {
+  get name() {
+    return this.get('name')
+  }
+
+  set name(newName) {
+    if(newName){
+      this.set('name', newName)
+    }
+  }
+
   defaults() {
     type: 'images'
   }
 
   constructor(options) {
-    console.log('new model')
     super(options)
   }
 }
-
 Backbone.modelFactory.registerModel(Image)
 
 class ImagesCollection extends Collection {
