@@ -10,18 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-var $ = require('jquery');
-var Backbone = require('backbone');
-var _ = require('underscore');
-Backbone.$ = $;
-require('backbone-jsonapi')(Backbone, _);
-
+require('jquery');
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
 
-var foo = require('./foo');
-console.log(foo(12));
-
-var bar = require('./welcome.es6');
-new bar;
+var images = require('./images_collection.es6');
+window.images = new images
